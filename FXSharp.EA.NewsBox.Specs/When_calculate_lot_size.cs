@@ -22,5 +22,14 @@ namespace FXSharp.EA.NewsBox.Specs
 
             Assert.AreEqual(0.1, lot);
         }
+
+        [Test]
+        public void Should_default_to_smallest_lot_if_deposit_is_not_enough()
+        {
+            var moneyManagement = new MoneyManagement(1, 100);
+            double lot = moneyManagement.CalculateLotSize(200);
+
+            Assert.AreEqual(0.01, lot);
+        }
     }
 }

@@ -28,7 +28,8 @@ namespace FXSharp.EA.OrderManagements
 
         public double CalculateLotSize(double stopLoss)
         {
-            return Math.Round(RiskValue/(ValuePerPips*Pips(stopLoss)), 2);
+            var lot = Math.Round(RiskValue/(ValuePerPips*Pips(stopLoss)), 2);
+            return lot > 0.0 ? lot : 0.01;
         }
 
         private double Pips(double point)

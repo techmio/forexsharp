@@ -1,4 +1,5 @@
-﻿using FXSharp.TradingPlatform.Exts;
+﻿using FXSharp.EA.OrderManagements;
+using FXSharp.TradingPlatform.Exts;
 
 namespace FXSharp.EA.NewsBox
 {
@@ -28,14 +29,14 @@ namespace FXSharp.EA.NewsBox
                 buyOrder.ChangeTakeProfitInPoints(mbConfig.TakeProfit);
                 buyOrder.ChangeStopLossInPoints(mbConfig.StopLoss);
                 sellOrder.Close();
-                orderManager.OrderRunning(buyOrder, new TrailingMethod(buyOrder));
+                orderManager.OrderRunning(buyOrder, new ProgressiveProtifProtector(buyOrder));
             }
             else if (sellOrder.IsRunning)
             {
                 sellOrder.ChangeTakeProfitInPoints(mbConfig.TakeProfit);
                 sellOrder.ChangeStopLossInPoints(mbConfig.StopLoss);
                 buyOrder.Close();
-                orderManager.OrderRunning(sellOrder,  new TrailingMethod(sellOrder));
+                orderManager.OrderRunning(sellOrder, new ProgressiveProtifProtector(sellOrder));
             }
             else if (cancel)
             {

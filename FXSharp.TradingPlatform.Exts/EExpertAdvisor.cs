@@ -103,6 +103,11 @@ namespace FXSharp.TradingPlatform.Exts
             get { return new Times(this); }
         }
 
+        public int Bars
+        {
+            get { return this.Bars(); }
+        }
+
         public double ATR
         {
             get { return this.iATR(Symbol, TIME_FRAME.PERIOD_H4, 14, 0); }

@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{F864A993-0025-44A7-8517-9D216B93B29F}</ProjectGuid>
+    <ProjectGuid>{C14C28D0-7EA7-4837-8831-26A7950D62AC}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>FXSharp.EA.OrderManagements</RootNamespace>
-    <AssemblyName>FXSharp.EA.OrderManagements</AssemblyName>
+    <RootNamespace>FXSharp.EA.ExportBar</RootNamespace>
+    <AssemblyName>FXSharp.EA.ExportBar</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -39,16 +39,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IProfitProtector.cs" />
-    <Compile Include="MoneyManagement.cs" />
-    <Compile Include="ProgressiveProtifProtector.cs" />
+    <Compile Include="ExportBarScript.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ThreeLevelProfitProtector.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\FXSharp.TradingPlatform.Exts\FXSharp.TradingPlatform.Exts.csproj">
-      <Project>{e33f0f2b-6fbd-4e1c-9981-510dd229c58e}</Project>
+      <Project>{E33F0F2B-6FBD-4E1C-9981-510DD229C58E}</Project>
       <Name>FXSharp.TradingPlatform.Exts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TradePlatform.MT4\TradePlatform.MT4.Core\TradePlatform.MT4.Core.csproj">
+      <Project>{65AA3653-CE56-4029-A9AD-46D5CAA45829}</Project>
+      <Name>TradePlatform.MT4.Core</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

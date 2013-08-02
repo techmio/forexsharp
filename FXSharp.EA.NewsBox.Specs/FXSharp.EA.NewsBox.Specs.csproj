@@ -61,7 +61,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Movement.cs" />
     <Compile Include="OrderDetail.cs" />
+    <Compile Include="SpZone.cs" />
+    <Compile Include="When_calculate_support_and_resistance_zone.cs" />
     <Compile Include="When_trail_sell_profit.cs" />
     <Compile Include="When_calculate_lot_size.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -72,6 +75,7 @@
     <Compile Include="When_receive_all_economic_event_with_different_time.cs" />
     <Compile Include="When_receive_economic_event_with_the_same_time_and_currency.cs" />
     <Compile Include="When_trail_buy_profit.cs" />
+    <Compile Include="ZoneDetector.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -85,6 +89,14 @@
       <Project>{f864a993-0025-44a7-8517-9d216b93b29f}</Project>
       <Name>FXSharp.EA.OrderManagements</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="EURUSD_close.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="EURUSD_WeeklyClose.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

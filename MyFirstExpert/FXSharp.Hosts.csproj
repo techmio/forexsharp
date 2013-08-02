@@ -76,6 +76,10 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\FXSharp.EA.ExportBar\FXSharp.EA.ExportBar.csproj">
+      <Project>{c14c28d0-7ea7-4837-8831-26a7950d62ac}</Project>
+      <Name>FXSharp.EA.ExportBar</Name>
+    </ProjectReference>
     <ProjectReference Include="..\FXSharp.EA.FirstTest\FXSharp.EA.FirstTest.csproj">
       <Project>{09d4d2c3-05e1-4586-a2f2-66db0a8c9e83}</Project>
       <Name>FXSharp.EA.FirstTest</Name>
